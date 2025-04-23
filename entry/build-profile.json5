@@ -11,6 +11,14 @@
           "@tradplus/ks_adapter"
         ]
       },
+    },
+    //cpp相关编译配置
+    "externalNativeOptions": {
+      "abiFilters": [
+        "arm64-v8a",
+        "x86_64",
+      ]
+      //用于设置本机的ABI编译环境
     }
   },
   "buildOptionSet": [

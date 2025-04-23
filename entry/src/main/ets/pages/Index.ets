@@ -13,48 +13,45 @@ struct Index {
   build() {
     Column() {
       ActionBar({ title: $r('app.string.actionbar') }).height('10%')
-      Scroll(this.scroller) {
-        Column() {
-          Row() {
-            CustomButton({
-              mText: $r('app.string.init_sdk'), mOnClick: () => {
-                if (!TradPlus.isInitialized())
-                  TradPlus.initSDK(TestPlacement.appId, (error: Error) => {
-                    if (error === undefined) {
-                      console.log("初始化成功")
-                    } else {
-                      console.log("初始化失败："+error.message)
-                    }
-                  })
-              }, mWidth: '50%'
-            });
-            CustomButton({
-              mText: $r('app.string.RewardVideo'), mOnClick: () => {
-                routePageWithoutAds('pages/RewardVideoPage');
-              }, mWidth: '50%'
-            });
-            CustomButton({
-              mText: $r('app.string.Interstitial'), mOnClick: () => {
-                routePageWithoutAds('pages/InterstitialPage');
-              }, mWidth: '50%'
-            });
-            CustomButton({
-              mText: $r('app.string.splash'), mOnClick: () => {
-                routePageWithoutAds('pages/SplashPage');
-              }, mWidth: '50%'
-            });
-            CustomButton({
-              mText: $r('app.string.banner'), mOnClick: () => {
-                routePageWithoutAds('pages/BannerPage');
-              }, mWidth: '50%'
-            });
-            CustomButton({
-              mText: $r('app.string.native'), mOnClick: () => {
-                routePageWithoutAds('pages/NativePage');
-              }, mWidth: '50%'
-            });
-          }
-        }
+      Column() {
+        CustomButton({
+          mText: $r('app.string.init_sdk'), mOnClick: () => {
+            if (!TradPlus.isInitialized()) {
+              TradPlus.initSDK(TestPlacement.appId, (error: Error) => {
+                if (error === undefined) {
+                  console.log("初始化成功")
+                } else {
+                  console.log("初始化失败：" + error.message)
+                }
+              })
+            }
+          }, mWidth: '50%'
+        });
+        CustomButton({
+          mText: $r('app.string.RewardVideo'), mOnClick: () => {
+            routePageWithoutAds('pages/RewardVideoPage');
+          }, mWidth: '50%'
+        });
+        CustomButton({
+          mText: $r('app.string.Interstitial'), mOnClick: () => {
+            routePageWithoutAds('pages/InterstitialPage');
+          }, mWidth: '50%'
+        });
+        CustomButton({
+          mText: $r('app.string.splash'), mOnClick: () => {
+            routePageWithoutAds('pages/SplashPage');
+          }, mWidth: '50%'
+        });
+        CustomButton({
+          mText: $r('app.string.banner'), mOnClick: () => {
+            routePageWithoutAds('pages/BannerPage');
+          }, mWidth: '50%'
+        });
+        CustomButton({
+          mText: $r('app.string.native'), mOnClick: () => {
+            routePageWithoutAds('pages/NativePage');
+          }, mWidth: '50%'
+        });
       }
       .height('100%')
       .width('100%')
