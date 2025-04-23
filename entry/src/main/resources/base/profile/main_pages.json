@@ -1,5 +1,10 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/BannerPage",
+    "pages/RewardVideoPage",
+    "pages/InterstitialPage",
+    "pages/SplashPage",
+    "pages/NativePage"
   ]
 }

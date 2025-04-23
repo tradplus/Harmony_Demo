@@ -11,6 +11,78 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "actionbar",
+      "value": "TradPlus"
+    },
+    {
+      "name": "IsReady",
+      "value": "IsReady"
+    },
+    {
+      "name": "banner_load",
+      "value": "横幅请求"
+    },
+    {
+      "name": "banner_show",
+      "value": "横幅展示"
+    },
+    {
+      "name": "native_load",
+      "value": "原生请求"
+    },
+    {
+      "name": "native_show",
+      "value": "原生展示"
+    },
+    {
+      "name": "interstital_load",
+      "value": "插屏请求"
+    },
+    {
+      "name": "intersitital_show",
+      "value": "插屏展示"
+    },
+    {
+      "name": "video_load",
+      "value": "激励请求"
+    },
+    {
+      "name": "video_show",
+      "value": "激励展示"
+    },
+    {
+      "name": "splash_load",
+      "value": "开屏请求"
+    },
+    {
+      "name": "splash_show",
+      "value": "开屏展示"
+    },
+    {
+      "name": "init_sdk",
+      "value": "初始化SDK"
+    },
+    {
+      "name": "RewardVideo",
+      "value": "激励视频"
+    },
+    {
+      "name": "Interstitial",
+      "value": "插屏广告"
+    },
+    {
+      "name": "splash",
+      "value": "开屏广告"
+    },
+    {
+      "name": "native",
+      "value": "原生广告"
+    },
+    {
+      "name": "banner",
+      "value": "横幅广告"
     }
   ]
 }

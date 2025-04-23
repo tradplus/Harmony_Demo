@@ -1,6 +1,17 @@
 {
   "apiType": "stageMode",
   "buildOption": {
+    "arkOptions": {
+      "runtimeOnly": {
+        "packages": [
+          "@tradplus/csj_adapter",
+          "@tradplus/gdt_adapter",
+          "@tradplus/sigmob_adapter",
+          "@tradplus/huawei_adapter",
+          "@tradplus/ks_adapter"
+        ]
+      },
+    }
   },
   "buildOptionSet": [
     {

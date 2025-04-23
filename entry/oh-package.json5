@@ -5,6 +5,21 @@
   "main": "",
   "author": "",
   "license": "",
-  "dependencies": {}
+  "dependencies": {
+    "@tradplus/tradplusads": "1.1.5",
+    "@tradplus/csj_adapter": "file:libs/csj_adapter.har",
+    "@tradplus/gdt_adapter": "file:libs/gdt_adapter.har",
+    "@tradplus/sigmob_adapter": "file:libs/sigmob_adapter.har",
+    "@tradplus/huawei_adapter": "file:libs/huawei_adapter.har",
+    "@tradplus/ks_adapter": "file:libs/ks_adapter.har",
+    // sigmob sdk
+    "@sigmob/adsdk": "1.1.2",
+    // 穿山甲 SDK
+    "@csj/openadsdk": "6.7.0",
+    // 向快手申请获取har包
+    "ksadsdk": "file:libs/KSAdSDK-3.0.6.har",
+    // 向腾讯申请获取har包
+    "@gdt/gdt-union-sdk": "file:libs/GDTUnionSDK-default-release.har"
+  }
 }
 
