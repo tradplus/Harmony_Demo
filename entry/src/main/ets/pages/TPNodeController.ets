@@ -3,6 +3,7 @@ import { TPNative, TPNativeAdView } from '@tradplus/tradplusads';
 import { TPNativeArrayList } from "@tradplus/tradplusads";
 import { util } from "@kit.ArkTS";
 import { common } from "@kit.AbilityKit";
+
 export class TPNodeController extends NodeController {
   protected _childNodeController: NodeController | undefined;
 
@@ -14,20 +15,19 @@ export class TPNodeController extends NodeController {
     return childNode;
   }
 
-  public showAd(context: UIContext,mTPNative:TPNative,tpNativeView:TPNativeAdView) {
+  public showAd(context: UIContext, tpNative: TPNative, tpNativeView: TPNativeAdView) {
 
     let view = new TPNodeShow();
-    view.showAd(context, mTPNative, tpNativeView);
+    view.showAd(context, tpNative, tpNativeView);
 
     this._childNodeController = view;
     this.rebuild();
   }
-
 }
 
 class TPNativeParams {
-  tpNativeAdView ?: TPNativeAdView | undefined
-  tpNative?:TPNative | undefined
+  tpNativeAdView?: TPNativeAdView | undefined
+  tpNative?: TPNative | undefined
 }
 
 
@@ -53,20 +53,20 @@ export class TPNodeShow extends NodeController {
     this.rootNode.getRenderNode()?.appendChild(this.adNode.getFrameNode()?.getRenderNode());
 
   }
-
 }
 
 @Builder
 export function adBuilder(params: TPNativeParams) {
-  AdComponent({ mTpNativeView: params.tpNativeAdView,mTPNative: params.tpNative });
+  AdComponent({ mTpNativeView: params.tpNativeAdView, mTPNative: params.tpNative });
 }
 
 @Component
 struct AdComponent {
-  private mTpNativeView?:TPNativeAdView | undefined;
-  private mTPNative?:TPNative | undefined;
+  private mTpNativeView?: TPNativeAdView | undefined;
+  private mTPNative?: TPNative | undefined;
   @State private clickViewIds: TPNativeArrayList<string> = new TPNativeArrayList();
   private rootComponentId: string = util.generateRandomUUID()
+
   build() {
 
     Column() {
@@ -97,17 +97,13 @@ struct AdComponent {
         }
         .height(35)
         .width("85%")
-        // 子元素从主轴的起始位置对齐。
         .justifyContent(FlexAlign.Start);
       }
-      // 设置子元素在主轴方向上的排列方式 子元素在主轴上均匀分布，两端贴边，中间元素间距相等。
       .justifyContent(FlexAlign.SpaceBetween)
       .height(35)
       .width("100%")
       .padding({ left: 10, right: 10, bottom: 4 })
 
-      // 子组件按声明顺序依次叠加，后添加的组件覆盖在先添加的组件上方
-      //视频|图片区域
       Stack({ alignContent: Alignment.BottomStart }) {
         if (this.mTpNativeView?.mainImageUrl) {
           // 大图是图片
@@ -159,7 +155,6 @@ struct AdComponent {
     // 添加可见区域监听，SDK内部处理曝光逻辑
     .onVisibleAreaChange(this.mTPNative?.getVisibleAreaRatios(), this.mTPNative?.getVisibleAreaChangeListener())
   }
-
 
   @Builder
   // 图片类型的广告布局

@@ -20,7 +20,6 @@ struct InterstitialPage {
   build() {
     Column() {
       ActionBar({ title: $r('app.string.Interstitial') }).height('10%')
-      // 竖向的线性布局
       Column() {
         Row() {
           CustomButton({

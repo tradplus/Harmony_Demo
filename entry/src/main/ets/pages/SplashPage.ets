@@ -12,7 +12,6 @@ struct SplashPage {
   build() {
     Column() {
       ActionBar({ title: $r('app.string.splash') }).height('10%')
-      // 竖向的线性布局
       Column() {
         Row() {
           CustomButton({
@@ -116,6 +115,6 @@ struct SplashPage {
       },
     }
     this.tpSplash.loadListener = loadListener
-    this.tpSplash.load()
+    this.tpSplash.load(this.getUIContext())
   }
 }

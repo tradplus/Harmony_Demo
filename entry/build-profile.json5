@@ -21,6 +21,7 @@
       //用于设置本机的ABI编译环境
     }
   },
+
   "buildOptionSet": [
     {
       "name": "release",

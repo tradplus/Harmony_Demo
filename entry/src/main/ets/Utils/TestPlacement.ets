@@ -1,9 +1,9 @@
 export class TestPlacement {
   // 测试使用
-  static appId:string = "45D4481595D76929418E8C4C0D770372"
-  static banner:string = "59D15A1C1109B2037BE4D6C7E1F6D006"
-  static native:string = "A8A1B1BCB81190EA2D5D363F626EB5F6"
-  static splash:string = "E7C4CB9305E1671E52DA201662D3DEBB"
-  static rewardvideo:string = "BEC2452228FE346A3C594B5FD532DD01"
-  static interstital:string = "BEAC81FF0F2AF958B12885A76B1FC741"
+  static appId:string = "5E13A25C66273A82744AD241A3556FB1"
+  static banner:string = "831570BB8D036B55B7FA8DF7A049163B"
+  static native:string = "4324149632711DEB3411B7EA5BC65B0B"
+  static splash:string = "53A96F9CAC5F9FCDDF0A139274885DA8"
+  static rewardvideo:string = "38181B452AAB93778AF9EEAFFDAB3C60"
+  static interstital:string = "7678FFA1984532C2EB1771BEE49A9116"
 }

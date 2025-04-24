@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@tradplus/tradplusads": "1.1.5",
+    "@tradplus/tradplusads": "file:libs/TradPlusAds.har",
     "@tradplus/csj_adapter": "file:libs/csj_adapter.har",
     "@tradplus/gdt_adapter": "file:libs/gdt_adapter.har",
     "@tradplus/sigmob_adapter": "file:libs/sigmob_adapter.har",
@@ -19,7 +19,7 @@
     // 向快手申请获取har包
     "ksadsdk": "file:libs/KSAdSDK-3.0.6.har",
     // 向腾讯申请获取har包
-    "@gdt/gdt-union-sdk": "file:libs/GDTUnionSDK-default-release.har"
+    "@gdt/gdt-union-sdk": "file:libs/GDTUnionSDK-default-release.har",
   }
 }
 
