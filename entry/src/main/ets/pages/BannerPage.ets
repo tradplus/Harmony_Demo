@@ -14,29 +14,22 @@ struct BannerPage {
       ActionBar({ title: $r('app.string.banner') }).height('10%')
       Column() {
         Row() {
+          NodeContainer(this.tpBanner).height('10%')
+        }
+        Row() {
           CustomButton({
             mText: $r('app.string.banner_load'), mOnClick: () => {
               console.log("请求广告")
               this.loadBanner()
-            }, mWidth: '33%'
+            }, mWidth: '50%'
           });
 
           CustomButton({
             mText: $r('app.string.IsReady'), mOnClick: async () => {
               let isReady = await this.tpBanner?.isReady()
               console.log("isReady :" +isReady)
-            }, mWidth: '33%'
+            }, mWidth: '50%'
           });
-
-          CustomButton({
-            mText: $r('app.string.banner_show'), mOnClick: () => {
-              console.log("展示广告")
-              this.showBanner()
-            }, mWidth: '33%'
-          });
-
-          NodeContainer(this.tpBanner)
-
         }
       }
     }
@@ -61,12 +54,6 @@ struct BannerPage {
     onAdClosed: (adInfo: TPAdInfo): void => {
       // 用户触发点击
       console.log("onAdClicked:" + JSON.stringify(adInfo));
-    }
-  }
-
-  showBanner() {
-    if (this.tpBanner != undefined) {
-      this.tpBanner.show()
     }
   }
 

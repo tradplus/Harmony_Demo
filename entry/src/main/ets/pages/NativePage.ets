@@ -16,26 +16,28 @@ struct NativePage {
   build() {
     Column() {
       ActionBar({ title: $r('app.string.native') }).height('10%')
-      CustomButton({
-        mText: $r('app.string.native_load'), mOnClick: () => {
-          console.log("请求广告")
-          this.loadNative()
-        }, mWidth: '33%'
-      });
+      Row() {
+        CustomButton({
+          mText: $r('app.string.native_load'), mOnClick: () => {
+            console.log("请求广告")
+            this.loadNative()
+          }, mWidth: '33%'
+        });
 
-      CustomButton({
-        mText: $r('app.string.IsReady'), mOnClick: async () => {
-          let isReady = await this.tpNative?.isReady()
-          console.log("isReady :" +isReady)
-        }, mWidth: '33%'
-      });
+        CustomButton({
+          mText: $r('app.string.IsReady'), mOnClick: async () => {
+            let isReady = await this.tpNative?.isReady()
+            console.log("isReady :" + isReady)
+          }, mWidth: '33%'
+        });
 
-      CustomButton({
-        mText: $r('app.string.native_show'), mOnClick: () => {
-          console.log("展示广告")
-          this.showNative()
-        }, mWidth: '33%'
-      });
+        CustomButton({
+          mText: $r('app.string.native_show'), mOnClick: () => {
+            console.log("展示广告")
+            this.showNative()
+          }, mWidth: '33%'
+        });
+      }
 
       // 模版广告 展示
       if (this.isExpressType && this.isShow) {

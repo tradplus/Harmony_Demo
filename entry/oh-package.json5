@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@tradplus/tradplusads": "file:libs/TradPlusAds.har",
+    "@tradplus/tradplusads": "1.0.1",
     "@tradplus/csj_adapter": "file:libs/csj_adapter.har",
     "@tradplus/gdt_adapter": "file:libs/gdt_adapter.har",
     "@tradplus/sigmob_adapter": "file:libs/sigmob_adapter.har",
